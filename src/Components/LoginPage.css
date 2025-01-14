@@ -1,0 +1,116 @@
+/* LoginPage.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background: #010b20; /* Dark background representing space */
+}
+
+/* Starry Background Animation */
+@keyframes starrySky {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://cdn.pixabay.com/photo/2017/08/30/19/57/galaxy-2695560_960_720.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #8ed1fc, 0 0 20px #8ed1fc, 0 0 30px #8ed1fc; /* Glowing effect */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  backdrop-filter: blur(8px); /* Blurred background effect */
+  position: relative;
+}
+
+.login-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-input::placeholder {
+  color: #bbb;
+}
+
+.login-input:focus {
+  border-color: #8ed1fc;
+  box-shadow: 0 0 10px rgba(142, 209, 252, 0.8);
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #8ed1fc;
+  color: #0d1b2a;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 0 15px rgba(142, 209, 252, 0.7); /* Glowing button */
+}
+
+.login-button:hover {
+  background-color: #56b0e8;
+  box-shadow: 0 0 25px rgba(142, 209, 252, 1); /* More glowing effect */
+  transform: translateY(-2px);
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+}

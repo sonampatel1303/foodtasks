@@ -1,0 +1,96 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  /* Navbar Logo Styling */
+  .navbar-logo {
+    color: #ffd700;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493;
+  }
+  
+  /* Ensure no dots appear from any list in the navbar */
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding from the list */
+    margin: 0; /* Remove margin from the list */
+  }
+  
+  /* Individual Navbar Link Styling */
+  .navbar-link {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none; /* Remove default underline from links */
+  }
+  
+  /* Navbar Link Hover Effect */
+  .navbar-link:hover {
+    color: #ff1493;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Adding Underline Animation on Hover */
+  .navbar-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff1493;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Navbar Logout Button Styling */
+  .navbar-logout {
+    background-color: #ff1493;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-logout:hover {
+    background-color: #ff69b4;
+  }
+  
+  /* Responsive Navbar Styling */
+  @media (max-width: 768px) {
+    .navbar-logo {
+      font-size: 1.5rem;
+    }
+  
+    .navbar-link {
+      font-size: 1rem;
+    }
+  
+    .navbar-links {
+      gap: 15px;
+    }
+  }
+  
